@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium : read and write stories</title>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Medium</div>
+        <nav>
+            <ul>
+                <li><a href="our story.html">Our story</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="#" id="writeBtn">Write</a></li>
+                <li><a href="#" id="signInBtn">Sign in</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button" id="getStartedBtn">Get started</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>HUMAN stories & ideas</h1>
+                <p>A place to read, write, and deepen your understanding</p>
+                <button class="cta-button" id="startReadingBtn">Start reading</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/medium.png" alt="Illustration">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Text to speech</a></li>
+        </ul>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create an account to start writing.</h2>
+            <button class="signup-btn"><img src="images/google.png" alt="Google"> Sign up with Google</button>
+            <button class="signup-btn"><img src="images/fbk.png" alt="Facebook"> Sign up with Facebook</button>
+            <button class="signup-btn"><img src="images/mail.jpg" alt="Email"> Sign up with email</button>
+            <p>Already have an account? <a href="#" id="signInLink">Sign in</a></p>
+            <p>Click "Sign up" to agree to Medium's <a href="#">Terms of Service</a> and acknowledge that Medium's <a href="#">Privacy Policy</a> applies to you.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signInBtn').onclick = function() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        document.getElementById('getStartedBtn').onclick = function() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        document.getElementById('startReadingBtn').onclick = function() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        document.getElementById('writeBtn').onclick = function() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        document.getElementsByClassName('close')[0].onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
